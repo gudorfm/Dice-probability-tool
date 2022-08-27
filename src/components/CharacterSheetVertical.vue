@@ -24,7 +24,7 @@
         <tr>
             <th>Strength</th>
             <td><input class="form-contol" v-model=stats.strength /></td>
-            <td>0</td>
+            <td> {{strengthMod}} </td>
         </tr>
       </tbody>
 
@@ -32,7 +32,7 @@
         <tr>
             <th>Dexterity</th>
             <td><input class="form-contol" v-model=stats.dexterity /></td>
-            <td>0</td>
+            <td>{{dexterityMod}}</td>
         </tr>
       </tbody>
 
@@ -40,7 +40,7 @@
         <tr>
             <th>Constitution</th>
             <td><input class="form-contol" v-model=stats.constitution /></td>
-            <td>0</td>
+            <td>{{constitutionMod}}</td>
         </tr>
       </tbody>
 
@@ -48,7 +48,7 @@
         <tr>
             <th>Intelligence</th>
             <td><input class="form-contol" v-model=stats.intelligence /></td>
-            <td>0</td>
+            <td>{{intelligenceMod}}</td>
         </tr>
       </tbody>
 
@@ -56,7 +56,7 @@
         <tr>
             <th>Wisdom</th>
             <td><input class="form-contol" v-model=stats.wisdom /></td>
-            <td>0</td>
+            <td>{{wisdomMod}}</td>
         </tr>
       </tbody>
 
@@ -64,7 +64,7 @@
         <tr>
             <th>Charisma</th>
             <td><input class="form-contol" v-model=stats.charisma /></td>
-            <td>0</td>
+            <td>{{charismaMod}}</td>
         </tr>
       </tbody>
     </table>
@@ -85,6 +85,26 @@ export default {
         charisma: 10
       }
     }
+  },
+  computed: {
+    strengthMod() {
+        return Math.floor((this.stats.strength - 10) /2);
+    },
+    dexterityMod() {
+        return Math.floor((this.stats.dexterity - 10) /2);
+    },
+    constitutionMod() {
+        return Math.floor((this.stats.constitution - 10) /2);
+    },
+    intelligenceMod() {
+        return Math.floor((this.stats.intelligence - 10) /2);
+    },
+    wisdomMod() {
+        return Math.floor((this.stats.wisdom - 10) /2);
+    },
+    charismaMod() {
+        return Math.floor((this.stats.charisma - 10) /2);
+    },
   }
 };
 </script>
