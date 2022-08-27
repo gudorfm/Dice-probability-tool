@@ -1,8 +1,11 @@
 {
   "name": "final-vue-capstone-seed",
   "version": "0.1.0",
+  "homepage": "https://gudorfm.github.io/Dice-probability-tool/",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -12,6 +15,7 @@
     "bootstrap": "^5.0.2",
     "core-js": "^3.6.5",
     "execa": "^6.1.0",
+    "gh-pages": "^4.0.0",
     "travis": "^0.1.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",

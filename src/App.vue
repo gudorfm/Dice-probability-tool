@@ -8,6 +8,7 @@
         <i class="fas fa-home"></i> <!-- This is a font awesome icon -->
         Home 
       </router-link>
+      <!--
       <router-link
         class="nav-item"
         v-bind:to="{ name: 'register' }"
@@ -23,9 +24,8 @@
         v-bind:to="{ name: 'logout' }"
         v-if="$store.state.token">
         &nbsp;|&nbsp;Logout
-      </router-link>
+      </router-link>-->
     </div>
-    
     <router-view />
   </div>
 </template>
