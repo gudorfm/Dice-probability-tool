@@ -1,12 +1,16 @@
 <template>
   <div class="home">
     <h1>Home</h1>
-    <p>Does this do the thing?!!!</p>
+    <character-sheet-vertical />
   </div>
 </template>
 
 <script>
+import CharacterSheetVertical from "../components/CharacterSheetVertical.vue";
 export default {
-  name: "home"
+  name: "home",
+  components: {
+    CharacterSheetVertical,
+  },
 };
 </script>
