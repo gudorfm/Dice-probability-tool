@@ -1,16 +1,6 @@
 <template>
   <div class="home">
     <table class="table table-striped table-hover">
-      <!--<thead>
-        <tr>
-          <th scope="col">Strength</th>
-          <th scope="col">Dexterity</th>
-          <th scope="col">Constitution</th>
-          <th scope="col">Intelligence</th>
-          <th scope="col">Wisdom</th>
-          <th scope="col">Charisma</th>
-        </tr>
-      </thead>-->
 
       <thead>
         <tr>
@@ -68,6 +58,7 @@
         </tr>
       </tbody>
     </table>
+
   </div>
 </template>
 
@@ -83,7 +74,11 @@ export default {
         intelligence: 10,
         wisdom: 10,
         charisma: 10
-      }
+      },
+      chartData: {
+        labels: [ 'January', 'February', 'March' ],
+        datasets: [ { data: [40, 20, 12] } ]
+      },
     }
   },
   computed: {
@@ -105,6 +100,6 @@ export default {
     charismaMod() {
         return Math.floor((this.stats.charisma - 10) /2);
     },
-  }
+  },
 };
 </script>
