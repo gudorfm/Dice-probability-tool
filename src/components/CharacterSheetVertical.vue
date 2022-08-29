@@ -14,7 +14,7 @@
         <tr>
           <th>Strength</th>
           <td><input class="form-contol" v-model=stats.strength /></td>
-          <td> {{ strengthMod }} </td>
+          <td> {{  strengthMod  }} </td>
         </tr>
       </tbody>
 
@@ -22,7 +22,7 @@
         <tr>
           <th>Dexterity</th>
           <td><input class="form-contol" v-model=stats.dexterity /></td>
-          <td>{{ dexterityMod }}</td>
+          <td>{{  dexterityMod  }}</td>
         </tr>
       </tbody>
 
@@ -30,7 +30,7 @@
         <tr>
           <th>Constitution</th>
           <td><input class="form-contol" v-model=stats.constitution /></td>
-          <td>{{ constitutionMod }}</td>
+          <td>{{  constitutionMod  }}</td>
         </tr>
       </tbody>
 
@@ -38,7 +38,7 @@
         <tr>
           <th>Intelligence</th>
           <td><input class="form-contol" v-model=stats.intelligence /></td>
-          <td>{{ intelligenceMod }}</td>
+          <td>{{  intelligenceMod  }}</td>
         </tr>
       </tbody>
 
@@ -46,7 +46,7 @@
         <tr>
           <th>Wisdom</th>
           <td><input class="form-contol" v-model=stats.wisdom /></td>
-          <td>{{ wisdomMod }}</td>
+          <td>{{  wisdomMod  }}</td>
         </tr>
       </tbody>
 
@@ -54,7 +54,7 @@
         <tr>
           <th>Charisma</th>
           <td><input class="form-contol" v-model=stats.charisma /></td>
-          <td>{{ charismaMod }}</td>
+          <td>{{  charismaMod  }}</td>
         </tr>
       </tbody>
     </table>
@@ -111,6 +111,11 @@ export default {
           label: 'Ability Scores',
           backgroundColor: '#f87979',
           data: [this.stats.strength, this.stats.dexterity, this.stats.constitution, this.stats.intelligence, this.stats.wisdom, this.stats.charisma]
+        },
+        {
+          label: 'Modifiers',
+          backgroundColor: '#000000',
+          data: [this.strengthMod, this.dexterityMod, this.constitutionMod, this.intelligenceMod, this.wisdomMod, this.charismaMod]
         }]
       }
     }
@@ -118,6 +123,6 @@ export default {
   components: {
     Radar
   },
-  
+
 };
 </script>
