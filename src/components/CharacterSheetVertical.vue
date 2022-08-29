@@ -75,20 +75,12 @@ export default {
   data() {
     return {
       stats: {
-        strength: 20,
-        dexterity: 10,
-        constitution: 10,
-        intelligence: 10,
+        strength: 18,
+        dexterity: 16,
+        constitution: 14,
+        intelligence: 12,
         wisdom: 10,
-        charisma: 10
-      },
-      chartData: {
-        labels: ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma'],
-        datasets: [{
-          label: 'Data One',
-          backgroundColor: '#f87979',
-          data: [10, 10, 10, 10, 10, 10]
-        }]
+        charisma: 8
       },
     }
   },
@@ -112,9 +104,20 @@ export default {
     charismaMod() {
       return Math.floor((this.stats.charisma - 10) / 2);
     },
+    chartData() {
+      return {
+        labels: ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma'],
+        datasets: [{
+          label: 'Ability Scores',
+          backgroundColor: '#f87979',
+          data: [this.stats.strength, this.stats.dexterity, this.stats.constitution, this.stats.intelligence, this.stats.wisdom, this.stats.charisma]
+        }]
+      }
+    }
   },
   components: {
     Radar
   },
+  
 };
 </script>
