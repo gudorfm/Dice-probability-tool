@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="character-sheet">
     <table class="table table-striped table-hover">
 
       <thead>
@@ -126,3 +126,10 @@ export default {
 
 };
 </script>
+
+<style scoped>
+  .character-sheet {
+    display: flex;
+    flex-direction: row;
+  }
+</style>
