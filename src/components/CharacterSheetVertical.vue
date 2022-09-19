@@ -13,7 +13,7 @@
       <tbody>
         <tr>
           <th>Strength</th>
-          <td><input class="form-contol" v-model=stats.strength /></td>
+          <td><input type="number" min="0" max="30" class="form-contol" oninput="validity.valid||(value='');" v-model=stats.strength /></td>
           <td> {{  strengthMod  }} </td>
         </tr>
       </tbody>
@@ -21,7 +21,7 @@
       <tbody>
         <tr>
           <th>Dexterity</th>
-          <td><input class="form-contol" v-model=stats.dexterity /></td>
+          <td><input type="number" min="0" max="30" class="form-contol" oninput="validity.valid||(value='');" v-model=stats.dexterity /></td>
           <td>{{  dexterityMod  }}</td>
         </tr>
       </tbody>
@@ -29,7 +29,7 @@
       <tbody>
         <tr>
           <th>Constitution</th>
-          <td><input class="form-contol" v-model=stats.constitution /></td>
+          <td><input type="number" min="0" max="30" class="form-contol" oninput="validity.valid||(value='');" v-model=stats.constitution /></td>
           <td>{{  constitutionMod  }}</td>
         </tr>
       </tbody>
@@ -37,7 +37,7 @@
       <tbody>
         <tr>
           <th>Intelligence</th>
-          <td><input class="form-contol" v-model=stats.intelligence /></td>
+          <td><input type="number" min="0" max="30" class="form-contol" oninput="validity.valid||(value='');" v-model=stats.intelligence /></td>
           <td>{{  intelligenceMod  }}</td>
         </tr>
       </tbody>
@@ -45,7 +45,7 @@
       <tbody>
         <tr>
           <th>Wisdom</th>
-          <td><input class="form-contol" v-model=stats.wisdom /></td>
+          <td><input type="number" min="0" max="30" class="form-contol" oninput="validity.valid||(value='');" v-model=stats.wisdom /></td>
           <td>{{  wisdomMod  }}</td>
         </tr>
       </tbody>
@@ -53,7 +53,7 @@
       <tbody>
         <tr>
           <th>Charisma</th>
-          <td><input class="form-contol" v-model=stats.charisma /></td>
+          <td><input type="number" min="0" max="30" class="form-contol" oninput="validity.valid||(value='');" v-model=stats.charisma /></td>
           <td>{{  charismaMod  }}</td>
         </tr>
       </tbody>
@@ -94,7 +94,6 @@ export default {
   },
   computed: {
     strengthMod() {
-      //this.chartData.datasets[0].data[0] = this.stats.strength;
       return Math.floor((this.stats.strength - 10) / 2);
     },
     dexterityMod() {
@@ -125,7 +124,6 @@ export default {
           backgroundColor: '#000000',
           data: [this.strengthMod, this.dexterityMod, this.constitutionMod, this.intelligenceMod, this.wisdomMod, this.charismaMod]
         }]
-
       }
     }
   },
