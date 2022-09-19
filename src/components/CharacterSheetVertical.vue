@@ -59,7 +59,7 @@
       </tbody>
     </table>
 
-    <Radar :chart-data="chartData" />
+    <Radar :chart-data="chartData" :chart-options="chartOptions" />
 
   </div>
 </template>
@@ -82,6 +82,14 @@ export default {
         wisdom: 10,
         charisma: 8
       },
+      chartOptions: {
+        scales: {
+          r: {
+            min: -5,
+            max: 30
+          }
+        }
+      }
     }
   },
   computed: {
@@ -117,6 +125,7 @@ export default {
           backgroundColor: '#000000',
           data: [this.strengthMod, this.dexterityMod, this.constitutionMod, this.intelligenceMod, this.wisdomMod, this.charismaMod]
         }]
+
       }
     }
   },
