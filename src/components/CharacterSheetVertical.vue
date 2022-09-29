@@ -89,7 +89,8 @@ export default {
             max: 30
           }
         }
-      }
+      },
+      toHit: 10
     }
   },
   computed: {
@@ -125,12 +126,18 @@ export default {
           data: [this.strengthMod, this.dexterityMod, this.constitutionMod, this.intelligenceMod, this.wisdomMod, this.charismaMod]
         }]
       }
+    },
+    chanceHitStrength() {
+      // for loop from 1-20
+      // calculate hit/miss for each possible roll
+      // put them in an array
+      // Then put them in a bar graph
+      return this.toHit - 20
     }
   },
   components: {
     Radar
   },
-
 };
 </script>
 
